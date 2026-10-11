@@ -107,4 +107,11 @@ public class OrderService {
         }
         return map;
     }
+
+    @Override
+    public String toString() {
+        return "OrderService{" +
+                "orders=" + orders +
+                '}';
+    }
 }
