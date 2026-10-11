@@ -22,4 +22,16 @@ public class Customer {
     public String getEmail() {
         return email;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return id == customer.id && Objects.equals(name, customer.name) && Objects.equals(email, customer.email);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, email);
+    }
 }
